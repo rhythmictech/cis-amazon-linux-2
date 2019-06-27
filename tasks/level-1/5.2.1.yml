@@ -8,6 +8,7 @@
     path: /etc/ssh/sshd_config
   register: sshd_config
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.1"
@@ -21,6 +22,7 @@
     mode: 0600
   when: sshd_config.stat.exists
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.1"

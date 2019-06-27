@@ -8,6 +8,7 @@
     path: /etc/ssh/sshd_config
   register: sshd_config_5_2_18
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.18"
@@ -23,6 +24,7 @@
     - cis_sshd_allow_users is defined and cis_sshd_allow_users|trim != ""
   notify: Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.18"
@@ -38,6 +40,7 @@
     - cis_sshd_allow_groups is defined and cis_sshd_allow_groups|trim != ""
   notify: Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.18"
@@ -53,6 +56,7 @@
     - cis_sshd_deny_users is defined and cis_sshd_deny_users|trim != ""
   notify: Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.18"
@@ -68,6 +72,7 @@
     - cis_sshd_deny_groups is defined and cis_sshd_deny_groups|trim != ""
   notify: Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.18"

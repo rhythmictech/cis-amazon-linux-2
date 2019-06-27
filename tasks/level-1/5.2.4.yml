@@ -8,6 +8,7 @@
     path: /etc/ssh/sshd_config
   register: sshd_config_5_2_4
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.4"
@@ -21,6 +22,7 @@
   notify: "Restart sshd"
   when: sshd_config_5_2_4.stat.exists
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.4"

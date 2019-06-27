@@ -8,6 +8,7 @@
     path: /etc/ssh/sshd_config
   register: sshd_config_5_2_16
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.16"
@@ -22,6 +23,7 @@
   notify:
     - Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.16"
@@ -36,6 +38,7 @@
   notify:
     - Restart sshd
   tags:
+    - sshd
     - level-1
     - section-5
     - "5.2.16"
