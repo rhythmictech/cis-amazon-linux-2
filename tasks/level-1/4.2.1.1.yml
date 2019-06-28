@@ -9,6 +9,7 @@
   when: cis_enable_rsyslog
   register: rsyslog_4_2_1_1
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.1.1"
@@ -24,6 +25,7 @@
     - rsyslog_4_2_1_1.rc is not defined or rsyslog_4_2_1_1.rc == 0
   ignore_errors: false
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.1.1"

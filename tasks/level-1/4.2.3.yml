@@ -12,6 +12,7 @@
     - { name: "rsyslog", state: "present" }
     - { name: "syslog-ng", state: "absent" }
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.3"
@@ -27,6 +28,7 @@
     - { name: "rsyslog", state: "absent" }
     - { name: "syslog-ng", state: "present" }
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.3"

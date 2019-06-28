@@ -13,6 +13,7 @@
   notify:
     - Restart rsyslog
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.1.3"

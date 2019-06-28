@@ -9,6 +9,7 @@
   register: syslog_ng_4_2_2_1
   when: cis_enable_syslog_ng
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.2.1"
@@ -25,6 +26,7 @@
     - syslog_ng_4_2_2_1.rc is not defined or syslog_ng_4_2_2_1.rc == 0
   ignore_errors: false
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.2.1"

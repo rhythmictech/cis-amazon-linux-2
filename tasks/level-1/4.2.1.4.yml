@@ -10,6 +10,7 @@
     dest: "/etc/rsyslog.conf"
   when: cis_enable_rsyslog_remote
   tags:
+    - syslog
     - level-1
     - section-4
     - "4.2.1.4"
