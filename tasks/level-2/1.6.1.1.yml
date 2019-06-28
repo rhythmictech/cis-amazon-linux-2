@@ -1,6 +1,5 @@
 # Standards: 0.11
 ---
-
 # 1.6.1.1 Ensure SELinux is not disabled in bootloader configuration (Scored)
 
 - name: Install the SE Linux requirements
@@ -9,15 +8,20 @@
       - libselinux-python
       - policycoreutils-python
     state: installed
-    retries: 3
-    delay: 2
+  retries: 3
+  delay: 2
+  tags:
+    - level-2
+    - section-1
+    - "1.6.11"
+    - scored
 
 - name: 1.6.1.1 Ensure SELinux is not disabled in bootloader configuration (Scored)
   selinux:
     policy: targeted
     state: enforcing
   tags:
-      - level-2
-      - section-1
-      - "1.6.11"
-      - scored
+    - level-2
+    - section-1
+    - "1.6.11"
+    - scored
