@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
-
 cis_target_os_distribution: "Amazon"
-cis_target_os_versions: 
+cis_target_os_versions:
   - "2"
+  - "(Karoo)"
 
 cis_modprobe_conf_filename: "/etc/modprobe.d/CIS.conf"
 cis_rescue_service_filename: "/usr/lib/systemd/system/rescue.service"
