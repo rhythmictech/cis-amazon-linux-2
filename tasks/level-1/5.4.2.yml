@@ -15,9 +15,11 @@
     - scored
 
 - name: 5.4.2 - Lock system user passwords
-  command: "usermod -L {{ item }}"
+  user:
+    name: "{{ item }}"
+    password_lock: yes
   with_items: "{{ audit_5_4_2.stdout_lines }}"
-  when: item != "root"
+  when: "item != 'root'"
   tags:
     - level-1
     - section-5
