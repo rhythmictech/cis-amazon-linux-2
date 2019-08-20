@@ -15,10 +15,15 @@
     - scored
 
 - name: 3.2.6 - Ensure bogus ICMP responses are ignored in active kernel parameters
-  command: "{{ item }}"
+  sysctl:
+    name: "{{ item.name }}"
+    sysctl_set: yes
+    value: "{{ item.value }}"
   with_items:
-    - "sysctl -w net.ipv4.icmp_ignore_bogus_error_responses=1"
-    - "sysctl -w net.ipv4.route.flush=1"
+    - name: "net.ipv4.icmp_ignore_bogus_error_responses"
+      value: 1
+    - name: "net.ipv4.route.flush"
+      value: 1
   tags:
     - level-1
     - section-3
