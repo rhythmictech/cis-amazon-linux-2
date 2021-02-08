@@ -14,7 +14,7 @@
     - "5.2.19"
     - scored
 
-- name: 5.2.16 - Ensure SSH warning banner isconfigured
+- name: 5.2.19 - Ensure SSH warning banner isconfigured
   lineinfile:
     regexp: "^Banner\\s+"
     line: "Banner {{ cis_sshd_banner }}"
